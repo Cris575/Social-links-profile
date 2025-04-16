@@ -1,0 +1,102 @@
+:root {
+  --bg-color: #141414;
+  --bg-card: #1f1f1f;
+  --bg-button: #333;
+  --color-text: #fff;
+  --color-p: #c4f82a;
+  --font-size-h1: 24px;
+  --font-size-p: 14px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  line-height: 150%;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  background-color: var(--bg-color);
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+div.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  img {
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+  }
+
+  h1 {
+    color: var(--color-text);
+    margin: 0;
+    font-size: var(--font-size-h1);
+  }
+}
+
+article.profile-card {
+  background-color: var(--bg-card);
+  height: 611px;
+  width: 384px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+p.profile-job {
+  color: var(--color-p);
+  margin: 0;
+  font-size: var(--font-size-p);
+}
+
+p.profile-bio {
+  color: var(--color-text);
+  font-size: var(--font-size-p);
+  margin: 0 0 24px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 800;
+  padding: 12px;
+  display: block;
+  margin-bottom: 15px;
+  height: 45px;
+  background-color: var(--bg-button);
+  border-radius: 8px;
+  &:hover {
+    color: var(--bg-color);
+    background-color: var(--color-p);
+  }
+}
+
+@media (max-width: 400px) {
+  article.profile-card {
+    padding: 24px;
+    height: 579px;
+    width: 327px;
+  }
+}
